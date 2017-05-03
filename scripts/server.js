@@ -168,7 +168,7 @@ StaticServlet.prototype.sendMissing_ = function (req, res, path) {
         'Content-Type':'text/html'
     });
     res.write('<!doctype html>\n');
-    res.write('<title>404 Not Found</title>\n');
+    res.write('<title>404 Not Founds</title>\n');
     res.write('<h1>Not Found</h1>');
     res.write(
         '<p>The requested URL ' +
