@@ -7,7 +7,10 @@ var util = require('util'),
     url = require('url'),
     events = require('events');
 
-var DEFAULT_PORT =  process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var DEFAULT_PORT =  process.env.OPENSHIFT_NODEJS_PORT || 8083;
+
+console.log("started!")
+console.log("Started on port 8083!")
 
 function main(argv) {
     new HttpServer({
