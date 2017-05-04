@@ -1,11 +1,12 @@
-#!/bin/env node
-
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var ip = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP ||
+  process.env.OPENSHIFT_INTERNAL_IP;
+
+var port = process.env.OPENSHIFT_NODEJS_PORT ||
+  process.env.OPENSHIFT_INTERNAL_PORT || 8080;
 
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
@@ -25,7 +26,7 @@ app.get('*', function (req, res) {
     });
 
 // listen (start app with node server.js) ======================================
-server.listen(port,ip,function() {
+server.listen(port, ipaddress, function() {
     console.log('listening');
     console.log("App listening on port " + port);
 });
