@@ -17,6 +17,7 @@
     "start": "node scripts/server.js"
   },
   "dependencies": {
-    "angular-ui-router": "^0.4.2"
+    "angular-ui-router": "^0.4.2",
+    "font-awesome": "^4.7.0"
   }
 }
