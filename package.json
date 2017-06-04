@@ -3,6 +3,9 @@
   "description": "A quickstart AngularJS project for OpenShift",
   "repository": "https://github.com/brandanmajeske/angular-seed-openshift",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.17.1",
     "express": "*",
     "karma": "~0.10",
@@ -19,6 +22,7 @@
   },
   "dependencies": {
     "angular-ui-router": "^0.4.2",
+    "bootstrap-sass-loader": "^1.0.10",
     "font-awesome": "^4.7.0"
   }
 }

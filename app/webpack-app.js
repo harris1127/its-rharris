@@ -1,6 +1,3 @@
-import './lib/jquery.min.js';
-import './lib/tether.min.js';
-import './lib/bootstrap.min.js';
 import './lib/clean-blog.min.js';
 import './lib/angular/angular.js';
 import './lib/angular-ui-router.min.js';
