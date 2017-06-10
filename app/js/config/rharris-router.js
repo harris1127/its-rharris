@@ -16,7 +16,7 @@ function Routes($stateProvider, $urlRouterProvider) {
         
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
-            url: '/home',
+            url: 'home',
             views: {
             	'header': {
             		templateUrl: 'partials/header.html'
@@ -24,25 +24,15 @@ function Routes($stateProvider, $urlRouterProvider) {
             	'content': {
             		templateUrl: 'partials/rharris-home.html',
             	},
+                'content1': {
+                    templateUrl: 'partials/resume.html',
+                },
             	'footer': {
             		templateUrl: 'partials/footer.html'
             	}
             }
             
         })
-        
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('about', {
-        	url: '/about',
-            templateUrl: 'partials/partial1.html',
-            controller: 'MyCtrl1'      
-        })
-
-        .state('menu', {
-        	url: '/menu',
-            templateUrl: 'partials/partial2.html',
-            controller: 'MyCtrl2'        
-        });
 
 }
 
