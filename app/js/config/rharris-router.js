@@ -31,6 +31,15 @@ function Routes($stateProvider, $urlRouterProvider) {
 
         })
 
+        .state('home.about', {
+            url: 'about',
+            views: {
+                'content@': {
+                    templateUrl: 'partials/about.html',
+                }
+            }
+        })
+
         .state('home.resume', {
             url: 'resume',
             views: {
@@ -45,6 +54,15 @@ function Routes($stateProvider, $urlRouterProvider) {
             views: {
                 'content@': {
                     templateUrl: 'partials/test.html',
+                }
+            }
+        })
+
+        .state('home.contact', {
+            url: 'contact',
+            views: {
+                'content@': {
+                    templateUrl: 'partials/contact.html',
                 }
             }
         })
