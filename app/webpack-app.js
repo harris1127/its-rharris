@@ -1,8 +1,8 @@
 import './lib/clean-blog.min.js';
-import './lib/angular/angular.js';
+import './lib/angular/angular.min';
 import './lib/angular-ui-router.min.js';
-import './js/app.js';
 import './js/config/rharris-core.module.js';
+import './js/app.js';
 import './js/config/rharris-router.js';
 import './js/services.js';
 import './js/controllers.js';

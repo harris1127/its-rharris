@@ -1,22 +1,22 @@
 (function(){
 
 'use strict';
-	
+
 angular
-    .module('rharris.config')
+    .module('rharris.core')
     .config(Routes);
 
 Routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 function Routes($stateProvider, $urlRouterProvider) {
 
- $urlRouterProvider.otherwise('/home');
-    
+ $urlRouterProvider.otherwise('/');
+
     $stateProvider
-        
+
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
-            url: 'home',
+            url: '/',
             views: {
             	'header': {
             		templateUrl: 'partials/header.html'
@@ -24,15 +24,22 @@ function Routes($stateProvider, $urlRouterProvider) {
             	'content': {
             		templateUrl: 'partials/rharris-home.html',
             	},
-                'content1': {
-                    templateUrl: 'partials/resume.html',
-                },
             	'footer': {
             		templateUrl: 'partials/footer.html'
             	}
             }
-            
+
         })
+
+        .state('home.resume', {
+            url: 'resume',
+            views: {
+                'content@': {
+                    templateUrl: 'partials/resume.html',
+                }
+            }
+        })
+
 
 }
 

@@ -1,6 +1,6 @@
 (function(){
 	
-angular.module('rharris.config', []);
+angular.module('rharris.core', []);
 
 
 })();

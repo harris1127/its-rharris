@@ -4,7 +4,7 @@
 
 angular.module('rharris', [
   'ui.router',
-  'rharris.config',
+  'rharris.core',
   'rharris.filters',
   'rharris.services',
   'rharris.directives',
