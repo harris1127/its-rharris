@@ -144,6 +144,15 @@ function Routes($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('home.test', {
+            url: 'test',
+            views: {
+                'content@': {
+                    templateUrl: 'partials/test.html',
+                }
+            }
+        })
+
 
 }
 
