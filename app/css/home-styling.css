@@ -9,7 +9,7 @@ body {
     font-family: Arial;
     -webkit-font-smoothing: antialiased;
     line-height: 1.1;
-    background-color: #131313;
+    background-color: #ffffff;
 }
 
 
@@ -61,7 +61,7 @@ input {-webkit-appearance: none;}
     font-weight: 400;
 }
 
-#blog-wrapper {
+#rharris-reveal {
     width: 100%;
     float: left;
     padding: 50px 0 200px 0;
@@ -75,9 +75,9 @@ input {-webkit-appearance: none;}
     position: relative;
 }
 
-.blog-post-1,
-.blog-post-2,
-.blog-post-3 {
+.rharris-post-1,
+.rharris-post-2,
+.rharris-post-3 {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -93,32 +93,32 @@ input {-webkit-appearance: none;}
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
-.blog-post-1.z,
-.blog-post-2.z,
-.blog-post-3.z {z-index: 10;}
+.rharris-post-1.z,
+.rharris-post-2.z,
+.rharris-post-3.z {z-index: 10;}
 
 
-.blog-post-1 {
+.rharris-post-1 {
     -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 50% 100%);
     background-image: url(http://www.highwallpaper.com/wp-content/uploads/Dark-Woods-1920x1080.jpg);
 }
-.showblog1 .blog-post-1 {
+.showblog1 .rharris-post-1 {
     -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);
 }
 
-.blog-post-2 {
+.rharris-post-2 {
     -webkit-clip-path: polygon(3% 0%, 50% 93%, 50% 93%, 97% 0%);
     background-image: url(http://randomwallpapers.net/trees-in-the-woods-forest-nature-2560x1600-wallpaper305804.jpg);
 }
-.showblog2 .blog-post-2 {
+.showblog2 .rharris-post-2 {
     -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
 }
 
-.blog-post-3 {
+.rharris-post-3 {
     -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
     background-image: url(http://burialday.com/wp-content/uploads/2016/10/Woods1.jpg);
 }
-.showblog3 .blog-post-3 {
+.showblog3 .rharris-post-3 {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 

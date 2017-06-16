@@ -23,6 +23,8 @@ function Routes($stateProvider, $urlRouterProvider) {
             	},
             	'content': {
             		templateUrl: 'partials/rharris-home.html',
+                    controller: 'HomeController',
+                    controllerAs: 'vm'
             	},
             	'footer': {
             		templateUrl: 'partials/footer.html'

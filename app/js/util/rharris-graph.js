@@ -1,10 +1,10 @@
 setTimeout(function start (){
-  
-  $('.bar').each(function(i){  
+
+  $('.bar').each(function(i){
     var $bar = $(this);
     $(this).append('<span class="count"></span>')
     setTimeout(function(){
-      $bar.css('width', $bar.attr('data-percent'));      
+      $bar.css('width', $bar.attr('data-percent'));
     }, i*100);
   });
 
@@ -20,4 +20,4 @@ $('.count').each(function () {
     });
 });
 
-}, 500)
+}, 500);
