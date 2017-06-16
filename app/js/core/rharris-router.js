@@ -19,15 +19,15 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: '/',
             views: {
             	'header': {
-            		templateUrl: 'partials/header.html'
+            		templateUrl: 'js/home/templates/header.html'
             	},
             	'content': {
-            		templateUrl: 'partials/rharris-home.html',
+            		templateUrl: 'js/home/rharris-home.html',
                     controller: 'HomeController',
                     controllerAs: 'vm'
             	},
             	'footer': {
-            		templateUrl: 'partials/footer.html'
+            		templateUrl: 'js/home/templates/footer.html'
             	}
             }
 
@@ -37,7 +37,9 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'about',
             views: {
                 'content@': {
-                    templateUrl: 'partials/about.html',
+                    templateUrl: 'js/home/about/about.html',
+                    controller: 'AboutController',
+                    controllerAs: 'vm'
                 }
             }
         })
@@ -46,7 +48,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'resume',
             views: {
                 'content@': {
-                    templateUrl: 'partials/resume.html',
+                    templateUrl: 'js/home/resume/resume.html',
                 }
             }
         })
@@ -55,7 +57,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'test',
             views: {
                 'content@': {
-                    templateUrl: 'partials/test.html',
+                    templateUrl: 'js/home/test.html',
                 }
             }
         })
@@ -64,7 +66,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'contact',
             views: {
                 'content@': {
-                    templateUrl: 'partials/contact.html',
+                    templateUrl: 'js/home/contact/contact.html',
                 }
             }
         })

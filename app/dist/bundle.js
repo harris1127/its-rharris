@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -79,6 +79,7 @@ angular.module('rharris', [
   'ui.router',
   'rharris.core',
   'rharris.home',
+  'rharris.about',
   'rharris.filters',
   'rharris.services',
   'rharris.directives',
@@ -125,15 +126,15 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: '/',
             views: {
             	'header': {
-            		templateUrl: 'partials/header.html'
+            		templateUrl: 'js/home/templates/header.html'
             	},
             	'content': {
-            		templateUrl: 'partials/rharris-home.html',
+            		templateUrl: 'js/home/rharris-home.html',
                     controller: 'HomeController',
                     controllerAs: 'vm'
             	},
             	'footer': {
-            		templateUrl: 'partials/footer.html'
+            		templateUrl: 'js/home/templates/footer.html'
             	}
             }
 
@@ -143,7 +144,9 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'about',
             views: {
                 'content@': {
-                    templateUrl: 'partials/about.html',
+                    templateUrl: 'js/home/about/about.html',
+                    controller: 'AboutController',
+                    controllerAs: 'vm'
                 }
             }
         })
@@ -152,7 +155,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'resume',
             views: {
                 'content@': {
-                    templateUrl: 'partials/resume.html',
+                    templateUrl: 'js/home/resume/resume.html',
                 }
             }
         })
@@ -161,7 +164,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'test',
             views: {
                 'content@': {
-                    templateUrl: 'partials/test.html',
+                    templateUrl: 'js/home/test.html',
                 }
             }
         })
@@ -170,7 +173,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'contact',
             views: {
                 'content@': {
-                    templateUrl: 'partials/contact.html',
+                    templateUrl: 'js/home/contact/contact.html',
                 }
             }
         })
@@ -182,23 +185,6 @@ function Routes($stateProvider, $urlRouterProvider) {
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* Controllers */
-
-angular.module('rharris.controllers', []).
-  controller('MyCtrl1', [function() {
-
-  }])
-  .controller('MyCtrl2', [function() {
-
-  }]);
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -216,7 +202,7 @@ angular.module('rharris.directives', []).
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -233,7 +219,97 @@ angular.module('rharris.filters', []).
 
 
 /***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+/**
+ * Created by rharris on 6/16/2017.
+ */
+(function(){
+
+    'use strict';
+
+    angular.module('rharris.about')
+        .controller('AboutController', AboutController);
+
+    AboutController.$inject = ['$scope'];
+
+
+    function AboutController($scope) {
+
+    }
+
+    let graphAnimation = function () {
+
+        setTimeout(function start (){
+
+            $('.bar').each(function(i){
+                var $bar = $(this);
+                $(this).append('<span class="count"></span>');
+                setTimeout(function(){
+                    $bar.css('width', $bar.attr('data-percent'));
+                }, i*100);
+            });
+
+            $('.count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).parent('.bar').attr('data-percent')
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now) +'%');
+                    }
+                });
+            });
+
+        }, 500);
+
+
+    };
+
+    //Document Ready
+    $(function(){
+        graphAnimation();
+    });
+
+
+
+})();
+
+/***/ }),
 /* 6 */
+/***/ (function(module, exports) {
+
+/**
+ * Created by rharris on 6/16/2017.
+ */
+(function(){
+
+    angular.module('rharris.about', []);
+
+
+})();
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* Controllers */
+
+angular.module('rharris.controllers', []).
+  controller('MyCtrl1', [function() {
+
+  }])
+  .controller('MyCtrl2', [function() {
+
+  }]);
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports) {
 
 /**
@@ -313,7 +389,7 @@ angular.module('rharris.filters', []).
 })();
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports) {
 
 /**
@@ -327,7 +403,7 @@ angular.module('rharris.filters', []).
 })();
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -343,36 +419,7 @@ angular.module('rharris.services', []).
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-setTimeout(function start (){
-
-  $('.bar').each(function(i){
-    var $bar = $(this);
-    $(this).append('<span class="count"></span>')
-    setTimeout(function(){
-      $bar.css('width', $bar.attr('data-percent'));
-    }, i*100);
-  });
-
-$('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).parent('.bar').attr('data-percent')
-    }, {
-        duration: 2000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now) +'%');
-        }
-    });
-});
-
-}, 500);
-
-
-/***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /**
@@ -385,7 +432,7 @@ $('.count').each(function () {
 for(var g=0;g<d.length;g++)if(!a(d[g],f[g]))return!1;return!0}}this.encode=h(d(a,"encode")),this.decode=h(d(a,"decode")),this.is=h(d(a,"is"),!0),this.equals=i(d(a,"equals")),this.pattern=a.pattern,this.$normalize=h(d(a,"$normalize")),this.name=a.name,this.$arrayMode=b}if(!a)return this;if("auto"===a&&!b)throw new Error("'auto' array mode is for query parameters only");return new d(this,a)},b.module("ui.router.util").provider("$urlMatcherFactory",v),b.module("ui.router.util").run(["$urlMatcherFactory",function(a){}]),w.$inject=["$locationProvider","$urlMatcherFactoryProvider"],b.module("ui.router.router").provider("$urlRouter",w),x.$inject=["$urlRouterProvider","$urlMatcherFactoryProvider"],b.module("ui.router.state").factory("$stateParams",function(){return{}}).constant("$state.runtime",{autoinject:!0}).provider("$state",x).run(["$injector",function(a){a.get("$state.runtime").autoinject&&a.get("$state")}]),y.$inject=[],b.module("ui.router.state").provider("$view",y),b.module("ui.router.state").provider("$uiViewScroll",z),A.$inject=["$state","$injector","$uiViewScroll","$interpolate","$q"],B.$inject=["$compile","$controller","$state","$interpolate"],b.module("ui.router.state").directive("uiView",A),b.module("ui.router.state").directive("uiView",B),I.$inject=["$state","$timeout"],J.$inject=["$state","$timeout"],K.$inject=["$state","$stateParams","$interpolate"],b.module("ui.router.state").directive("uiSref",I).directive("uiSrefActive",K).directive("uiSrefActiveEq",K).directive("uiState",J),L.$inject=["$state"],M.$inject=["$state"],b.module("ui.router.state").filter("isState",L).filter("includedByState",M)}(window,window.angular);
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 /**
@@ -1874,7 +1921,7 @@ angular.module('ngAnimate', ['ng'])
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 /*
@@ -2082,7 +2129,7 @@ $q:zd,$sce:Fd,$sceDelegate:Ed,$sniffer:Gd,$templateCache:hd,$timeout:Hd,$window:
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 /*!
@@ -2093,39 +2140,42 @@ $q:zd,$sce:Fd,$sceDelegate:Ed,$sniffer:Gd,$templateCache:hd,$timeout:Hd,$window:
 !function(i){"use strict";i("body").on("input propertychange",".floating-label-form-group",function(o){i(this).toggleClass("floating-label-form-group-with-value",!!i(o.target).val())}).on("focus",".floating-label-form-group",function(){i(this).addClass("floating-label-form-group-with-focus")}).on("blur",".floating-label-form-group",function(){i(this).removeClass("floating-label-form-group-with-focus")});if(i(window).width()>1170){var o=i("#mainNav").height();i(window).on("scroll",{previousTop:0},function(){var s=i(window).scrollTop();s<this.previousTop?s>0&&i("#mainNav").hasClass("is-fixed")?i("#mainNav").addClass("is-visible"):i("#mainNav").removeClass("is-visible is-fixed"):s>this.previousTop&&(i("#mainNav").removeClass("is-visible"),s>o&&!i("#mainNav").hasClass("is-fixed")&&i("#mainNav").addClass("is-fixed")),this.previousTop=s})}}(jQuery);
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lib_clean_blog_min_js__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lib_clean_blog_min_js__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lib_clean_blog_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__lib_clean_blog_min_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lib_angular_angular_min__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lib_angular_angular_min__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lib_angular_angular_min___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__lib_angular_angular_min__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib_angular_ui_router_min_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib_angular_ui_router_min_js__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib_angular_ui_router_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__lib_angular_ui_router_min_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__lib_angular_angular_animate_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__lib_angular_angular_animate_js__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__lib_angular_angular_animate_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__lib_angular_angular_animate_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_config_rharris_core_module_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_config_rharris_core_module_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__js_config_rharris_core_module_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_home_rharris_home_module__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_home_rharris_home_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__js_home_rharris_home_module__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_app_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_app_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__js_app_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_config_rharris_router_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_config_rharris_router_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__js_config_rharris_router_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_services_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_services_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__js_services_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_controllers_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_controllers_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__js_controllers_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__js_home_home_controller_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__js_home_home_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__js_home_home_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_filters_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_filters_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__js_filters_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_directives_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_directives_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__js_directives_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__js_util_rharris_graph_js__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__js_util_rharris_graph_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__js_util_rharris_graph_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_core_rharris_core_module_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_core_rharris_core_module_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__js_core_rharris_core_module_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_home_rharris_home_module_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_home_rharris_home_module_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__js_home_rharris_home_module_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_home_about_rharris_about_module_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_home_about_rharris_about_module_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__js_home_about_rharris_about_module_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_core_app_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_core_app_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__js_core_app_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_core_rharris_router_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_core_rharris_router_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__js_core_rharris_router_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_services_services_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_services_services_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__js_services_services_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__js_home_controllers_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__js_home_controllers_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__js_home_controllers_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_home_home_controller_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__js_home_home_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__js_home_home_controller_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_home_about_about_controller__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__js_home_about_about_controller___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__js_home_about_about_controller__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__js_filters_filters_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__js_filters_filters_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__js_filters_filters_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__js_directives_directives_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__js_directives_directives_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__js_directives_directives_js__);
+
 
 
 
