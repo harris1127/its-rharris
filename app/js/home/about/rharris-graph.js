@@ -1,7 +1,7 @@
 setTimeout(function start (){
 
   $('.bar').each(function(i){
-    var $bar = $(this);
+    let $bar = $(this);
     $(this).append('<span class="count"></span>')
     setTimeout(function(){
       $bar.css('width', $bar.attr('data-percent'));
