@@ -63,4 +63,4 @@ This project is licensed under the Ryan Harris
 
 Acknowledgments
 
-ngular-seed — the seed for AngularJS apps
+Angular-seed — the seed for AngularJS apps

@@ -12,7 +12,29 @@
             </div>
             <hr>
             <div class="post-preview">
-                <div ng-include="'js/util/rharris-graph.html'"></div>
+                <div class="wrap">
+                    <h1>What? Technical Skills</h1>
+                    <div class="holder">
+                        <div class="bar cf" data-percent="60%">
+                            <span class="label">Mario Kart Expert</span>
+                        </div>
+                        <div class="bar cf" data-percent="65%">
+                            <span class="label light">Java</span>
+                        </div>
+                        <div class="bar cf" data-percent="75%">
+                            <span class="label">Javascript</span>
+                        </div>
+                        <div class="bar cf" data-percent="80%">
+                            <span class="label light">Angular</span>
+                        </div>
+                        <div class="bar cf" data-percent="60%">
+                            <span class="label">HTML/CSS</span>
+                        </div>
+                        <div class="bar cf" data-percent="73%">
+                            <span class="label light">Car Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
                 <p class="post-meta">Posted by <a href="#">Ryan Harris</a> on May 19, 2017</p>
             </div>
             <hr>
@@ -47,3 +69,29 @@
         </div>
     </div>
 </div>
+<script>
+    setTimeout(function start (){
+
+        $('.bar').each(function(i){
+            let $bar = $(this);
+            $(this).append('<span class="count"></span>')
+            setTimeout(function(){
+                $bar.css('width', $bar.attr('data-percent'));
+            }, i*100);
+        });
+
+        $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).parent('.bar').attr('data-percent')
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now) +'%');
+                }
+            });
+        });
+
+    }, 500);
+
+</script>
