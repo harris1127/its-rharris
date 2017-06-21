@@ -1,97 +1,105 @@
-<!-- Main Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                    </h2>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2017</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <div class="wrap">
-                    <h1>What? Technical Skills</h1>
-                    <div class="holder">
-                        <div class="bar cf" data-percent="60%">
-                            <span class="label">Mario Kart Expert</span>
-                        </div>
-                        <div class="bar cf" data-percent="65%">
-                            <span class="label light">Java</span>
-                        </div>
-                        <div class="bar cf" data-percent="75%">
-                            <span class="label">Javascript</span>
-                        </div>
-                        <div class="bar cf" data-percent="80%">
-                            <span class="label light">Angular</span>
-                        </div>
-                        <div class="bar cf" data-percent="60%">
-                            <span class="label">HTML/CSS</span>
-                        </div>
-                        <div class="bar cf" data-percent="73%">
-                            <span class="label light">Car Enthusiast</span>
-                        </div>
-                    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- First Featurette -->
+    <div class="featurette" id="about">
+        <img class="featurette-image img-circle img-responsive pull-right" src="../../../img/IMG_1056.PNG"/>
+        <h2 class="featurette-heading">Software Developer
+            <span class="text-muted">Looking to create things that catch your eye</span>
+        </h2>
+        <p class="lead">I’m going to use all my tools, my God-given ability, and make the best I can with it. - LeBron James</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Second Featurette -->
+    <div class="featurette" id="services">
+        <img class="featurette-image img-circle img-responsive pull-left" src="../../../img/IMG_1057.JPG">
+        <h2 class="featurette-heading">Random Facts
+            <span class="text-muted">Its all fun and games until someone gets hurt</span>
+        </h2>
+        <p class="lead">This awesome site was created from scratch</p>
+        <p class="lead">Technology Lover</p>
+        <p class="lead">Car Enthusiast</p>
+        <p class="lead">Wanna be sneaker head</p>
+        <p class="lead">Apple Fanboy</p>
+        <p class="lead">Huge LeBron James Fan</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="post-preview">
+        <div class="wrap">
+            <h2 class="featurette-heading">What? Technical skills
+                <span class="text-muted">For ever changing!</span>
+            </h2>
+            <div class="holder">
+                <div class="bar cf" data-percent="60%">
+                    <span class="label">Mario Kart Expert</span>
                 </div>
-                <p class="post-meta">Posted by <a href="#">Ryan Harris</a> on May 19, 2017</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Science has not yet mastered prophecy
-                    </h2>
-                    <h3 class="post-subtitle">
-                        We predict too much for the next year and yet far too little for the next ten.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2017</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Failure is not an option
-                    </h2>
-                    <h3 class="post-subtitle">
-                        Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2017</p>
-            </div>
-            <hr>
-            <!-- Pager -->
-            <div class="clearfix">
-                <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
+                <div class="bar cf" data-percent="65%">
+                    <span class="label light">Java</span>
+                </div>
+                <div class="bar cf" data-percent="75%">
+                    <span class="label">Javascript</span>
+                </div>
+                <div class="bar cf" data-percent="80%">
+                    <span class="label light">Angular</span>
+                </div>
+                <div class="bar cf" data-percent="60%">
+                    <span class="label">HTML/CSS</span>
+                </div>
+                <div class="bar cf" data-percent="25%">
+                    <span class="label">Python</span>
+                </div>
+                <div class="bar cf" data-percent="73%">
+                    <span class="label light">Car Enthusiast</span>
+                </div>
             </div>
         </div>
+        <p class="post-meta">Posted by <a href="#">Ryan Harris</a> on May 19, 2017</p>
     </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Second Featurette -->
+    <div class="featurette" id="services">
+        <img class="featurette-image img-circle img-responsive pull-left" src="../../../img/R.png">
+        <h2 class="featurette-heading">#itsoffical
+            <span class="text-muted"></span>
+        </h2>
+        <p class="lead">Blog coming soon!</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+
 </div>
-<script>
-    setTimeout(function start (){
+<!-- /.container -->
+    <script>
+        setTimeout(function start (){
 
-        $('.bar').each(function(i){
-            let $bar = $(this);
-            $(this).append('<span class="count"></span>')
-            setTimeout(function(){
-                $bar.css('width', $bar.attr('data-percent'));
-            }, i*100);
-        });
-
-        $('.count').each(function () {
-            $(this).prop('Counter',0).animate({
-                Counter: $(this).parent('.bar').attr('data-percent')
-            }, {
-                duration: 2000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now) +'%');
-                }
+            $('.bar').each(function(i){
+                let $bar = $(this);
+                $(this).append('<span class="count"></span>')
+                setTimeout(function(){
+                    $bar.css('width', $bar.attr('data-percent'));
+                }, i*100);
             });
-        });
 
-    }, 500);
+            $('.count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).parent('.bar').attr('data-percent')
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now) +'%');
+                    }
+                });
+            });
 
-</script>
+        }, 500);
+
+    </script>
