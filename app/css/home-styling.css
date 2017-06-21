@@ -100,7 +100,7 @@ input {-webkit-appearance: none;}
 
 .rharris-post-1 {
     -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 50% 100%);
-    background-image: url(http://www.highwallpaper.com/wp-content/uploads/Dark-Woods-1920x1080.jpg);
+    background-image: url('../img/cereal.jpg');
 }
 .showblog1 .rharris-post-1 {
     -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);
@@ -108,7 +108,7 @@ input {-webkit-appearance: none;}
 
 .rharris-post-2 {
     -webkit-clip-path: polygon(3% 0%, 50% 93%, 50% 93%, 97% 0%);
-    background-image: url(http://randomwallpapers.net/trees-in-the-woods-forest-nature-2560x1600-wallpaper305804.jpg);
+    background-image: url('../img/IMG_0418.JPG');
 }
 .showblog2 .rharris-post-2 {
     -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
@@ -116,7 +116,7 @@ input {-webkit-appearance: none;}
 
 .rharris-post-3 {
     -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
-    background-image: url(http://burialday.com/wp-content/uploads/2016/10/Woods1.jpg);
+    background-image: url('../img/ide_snap.png');
 }
 .showblog3 .rharris-post-3 {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);

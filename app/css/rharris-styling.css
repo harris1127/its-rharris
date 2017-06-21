@@ -103,7 +103,7 @@ z-index: 999;
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #6476fe;
+  background-color: rgba(19, 31, 55, 0.68);
   color: white;
   border-radius: 100%;
   border: 7px solid #f1f1f1;

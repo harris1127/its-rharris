@@ -2,26 +2,69 @@
 <div id="rharris-reveal">
     <div class="blog">
 
-        <div class="rharris-post-1" ng-click="vm.post1()">
+        <div class="rharris-post-1">
             <div class="blog-copy">
-                <h2>Car Enthusiast</h2>
+                <h2></h2>
                 <p></p>
             </div>
         </div>
 
-        <div class="rharris-post-2" ng-click="vm.post2()">
+        <div class="rharris-post-2">
             <div class="blog-copy">
                 <h2>Software Developer</h2>
                 <p></p>
             </div>
         </div>
 
-        <div class="rharris-post-3" ng-click="vm.post3()">
+        <div class="rharris-post-3">
             <div class="blog-copy">
-                <h2>Cereal Addict</h2>
+                <h2>Semi Colon Enforcer</h2>
                 <p></p>
             </div>
         </div>
 
     </div>
 </div>
+<script>
+    $(".rharris-post-1").click(function(){
+        if ($("#rharris-reveal").hasClass("showblog1")) {
+            $("#rharris-reveal").removeClass("showblog1");
+            setTimeout(function(){
+                $(".rharris-post-1").removeClass("z");
+            }, 500);
+        } else {
+            $("#rharris-reveal").addClass("showblog1");
+            setTimeout(function(){
+                $(".rharris-post-1").addClass("z");
+            }, 0);
+        }
+    });
+
+    $(".rharris-post-2").click(function(){
+        if ($("#rharris-reveal").hasClass("showblog2")) {
+            $("#rharris-reveal").removeClass("showblog2");
+            setTimeout(function(){
+                $(".rharris-post-2").removeClass("z");
+            }, 500);
+        } else {
+            $("#rharris-reveal").addClass("showblog2");
+            setTimeout(function(){
+                $(".rharris-post-2").addClass("z");
+            }, 0);
+        }
+    });
+
+    $(".rharris-post-3").click(function(){
+        if ($("#rharris-reveal").hasClass("showblog3")) {
+            $("#rharris-reveal").removeClass("showblog3");
+            setTimeout(function(){
+                $(".rharris-post-3").removeClass("z");
+            }, 500);
+        } else {
+            $("#rharris-reveal").addClass("showblog3");
+            setTimeout(function(){
+                $(".rharris-post-3").addClass("z");
+            }, 0);
+        }
+    });
+</script>
