@@ -97,3 +97,10 @@
 </body>
 <div data-ui-view="footer"></div>
 </html>
+<script>
+    $('.nav a').on('click', function(){
+        if ($(document).width() <= 767){
+            $(".navbar-toggle").click();
+        }
+    });
+</script>
