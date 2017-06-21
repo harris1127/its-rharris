@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,25 +28,72 @@
     <script type="text/javascript" src="./dist/bundle.js"></script>
     <script type="text/javascript" src="./js/home/contact/contact.js"></script>
 
-  </head>
-  <body ng-app="rharris">
-    <div id="blog-nav" ui-view="header"></div>
-    <!-- Page Header -->
-    <header id="blog-header" class="masthead" style="background-image: url('img/IMG_0872.JPG')">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-            <div class="site-heading">
-              <h1>R. Harris</h1>
-              <span class="subheading">Under Construction</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+</head>
+<body ng-app="rharris">
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
     <div class="container">
-      <div data-ui-view="content"></div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu <i class="fa fa-bars"></i>
+        </button>
+        <!--<a class="navbar-brand" href="#">
+            <img src="../../../img/ryan_icon.PNG" width="30" height="30" alt="">
+        </a>-->
+        <a class="navbar-brand" data-ui-sref="home" style="color: white">Ryan Harris</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white" data-ui-sref="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white" data-ui-sref="home.about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white" data-ui-sref="home.resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white" data-ui-sref="home.contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <a target="_blank" class="btn btn-social-icon btn-linkedin"
+                           href="https://www.linkedin.com/in/rharris88/">
+                            <span class="fa fa-linkedin"></span>
+                        </a>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <a target="_blank" class="btn btn-social-icon btn-github" href="https://github.com/harris1127">
+                            <span class="fa fa-github"></span>
+                        </a>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <a target="_blank" class="btn btn-social-icon btn-twitter"
+                           href="#https://twitter.com/itsrharris">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <a target="_blank" class="btn btn-social-icon btn-default"
+                           href="https://stackoverflow.com/users/6906148/23rharris">
+                            <span class="fa fa-stack-overflow"></span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </body>
-  <div data-ui-view="footer"></div>
+</nav>
+<div class="container">
+    <div data-ui-view="content"></div>
+</div>
+</body>
+<div data-ui-view="footer"></div>
 </html>
