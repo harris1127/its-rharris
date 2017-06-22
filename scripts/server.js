@@ -25,6 +25,11 @@ app.get('*', function (req, res) {
         res.sendFile(__dirname + '/app/index.html'); // load the single view file (angular will handle the page changes on the front-end)
     });
 
+app.get('/.well-known/acme-challenge/:challengeHash', function(req, res) {
+    var hash = req.params.challengeHash+'.im3xdwOnE4siuDOLKh9D_aLGIuKulPmTzzJgkvhCO5E';
+    res.send(hash);
+});
+
 // listen (start app with node server.js) ======================================
 server.listen(port, ipaddress, function() {
     console.log('listening');
