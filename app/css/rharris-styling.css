@@ -25,7 +25,7 @@ z-index: 999;
   background: #ed7669;
 }
 .bar .label {
-  font-size: 1.65em;
+  font-size: 1.3em;
   padding: 1em;
   background: #3d3d3d;
   width: 8em;
@@ -306,28 +306,6 @@ section{
 
 /* About Styling */
 
-/**
- * ===================================================================
- *
- *  Kards v1.0 Base Stylesheet
- *  url: styleshout.com
- *  03-01-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. reset
- *  02. basic/base setup styles
- *  03. grid
- *  04. MISC
- *
- * ===================================================================
- */
-
-/**
- * ===================================================================
- * 01. reset - normalize.css v3.0.2 | MIT License | git.io/normalize
- *
- * -------------------------------------------------------------------
- */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -548,12 +526,6 @@ th {
   padding: 0;
 }
 
-/**
- * ===================================================================
- * 02. basic/base setup styles - (_basic.scss)
- *
- * -------------------------------------------------------------------
- */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -1101,9 +1073,6 @@ textarea {
  * -------------------------------------------------------------------
  */
 
-/**
- * Clearing - (http://nicolasgallagher.com/micro-clearfix-hack/
- */
 .group:before,
 .group:after {
   content: "";
@@ -1176,12 +1145,6 @@ textarea {
   text-align: center;
 }
 
-/**
- * ===================================================================
- * 02. base style overrides - (_document-setup.scss)
- *
- * -------------------------------------------------------------------
- */
 html {
   font-size: 10px;
 }
@@ -1290,7 +1253,7 @@ p img {
 }
 p.lead {
   font-family: "lora-regular", serif;
-  font-size: 2rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   color: #888888;
 }
@@ -1792,7 +1755,7 @@ input[type="button"] {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  height: 5.4rem;
+  height: 5.1rem;
   line-height: 5.4rem;
   padding: 0 3rem;
   margin: 0 .3rem 1.2rem 0;
@@ -2627,7 +2590,7 @@ header .logo a {
  */
 #about {
   background: #FFFFFF;
-  padding-top: 12rem;
+  padding-top: 6rem;
   padding-bottom: 15rem;
 }
 #about .section-intro {
@@ -2635,13 +2598,13 @@ header .logo a {
 }
 
 .intro-info {
-  margin-top: 4.2rem;
+  margin-top: 4.1rem;
   margin-right: -30px;
   margin-left: -30px;
 }
 .intro-info img {
-  height: 9rem;
-  width: 9rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 50%;
   margin: .9rem 0 0 0;
   float: left;
@@ -2659,7 +2622,7 @@ header .logo a {
 }
 .about-content h3 {
   font-family: "poppins-bold", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
 }
@@ -2676,18 +2639,18 @@ header .logo a {
   color: #313131;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 3rem;
 }
 .about-content .info-list li span {
   display: block;
   font-family: "poppins-regular", sans-serif;
   color: #888888;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 1;
 }
 .about-content .skill-bars {
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 .button-section {
@@ -3490,7 +3453,7 @@ header .logo a {
   color: #FFFFFF;
 }
 #contact button.submitform {
-  font-size: 1.5rem;
+  font-size: .9rem;
   display: block;
   letter-spacing: .2rem;
   height: 6.6rem;
@@ -4512,4 +4475,4 @@ img.mfp-img {
   right: 0;
   padding-top: 0;
 }
-/*# sourceMappingURL=vendor.css.map */}
+/*# sourceMappingURL=vendor.css.map */
