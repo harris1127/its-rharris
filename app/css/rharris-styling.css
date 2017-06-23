@@ -440,6 +440,7 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
+  min-height: 3rem;
 }
 
 button {
@@ -1619,7 +1620,7 @@ input[type="password"],
 textarea,
 select {
   display: block;
-  height: 6rem;
+  height: 3rem;
   padding: 1.5rem 0;
   border: 0;
   outline: none;
