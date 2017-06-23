@@ -44,7 +44,7 @@ z-index: 999;
   right: .25em;
   top: .75em;
   padding: .15em;
-  font-size: 1.65em;
+  font-size: 1.35em;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
 }
@@ -2035,84 +2035,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 /**
- * skillbars - (_skillbars.scss)
- * -------------------------------------------------------------------
- */
-.skill-bars {
-  list-style: none;
-  margin: 6rem 0 3rem;
-}
-.skill-bars li {
-  height: .6rem;
-  background: #a1a1a1;
-  width: 100%;
-  margin-bottom: 6rem;
-  padding: 0;
-  position: relative;
-}
-.skill-bars li strong {
-  position: absolute;
-  left: 0;
-  top: -3rem;
-  font-family: "poppins-bold", sans-serif;
-  color: #313131;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-}
-.skill-bars li .progress {
-  background: #313131;
-  position: relative;
-  height: 100%;
-}
-.skill-bars li .progress span {
-  position: absolute;
-  right: 0;
-  top: -3.6rem;
-  display: block;
-  font-family: "poppins-regular", sans-serif;
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1;
-  background: #313131;
-  padding: .6rem .6rem;
-  border-radius: 3px;
-}
-.skill-bars li .progress span::after {
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  margin-left: -5px;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 5px solid #313131;
-  content: "";
-}
-
-.skill-bars li .percent5   { width: 5%; }
-.skill-bars li .percent10  { width: 10%; }
-.skill-bars li .percent15  { width: 15%; }
-.skill-bars li .percent20  { width: 20%; }
-.skill-bars li .percent25  { width: 25%; }
-.skill-bars li .percent30  { width: 30%; }
-.skill-bars li .percent35  { width: 35%; }
-.skill-bars li .percent40  { width: 40%; }
-.skill-bars li .percent45  { width: 45%; }
-.skill-bars li .percent50  { width: 50%; }
-.skill-bars li .percent55  { width: 55%; }
-.skill-bars li .percent60  { width: 60%; }
-.skill-bars li .percent65  { width: 65%; }
-.skill-bars li .percent70  { width: 70%; }
-.skill-bars li .percent75  { width: 75%; }
-.skill-bars li .percent80  { width: 80%; }
-.skill-bars li .percent85  { width: 85%; }
-.skill-bars li .percent90  { width: 90%; }
-.skill-bars li .percent95  { width: 95%; }
-.skill-bars li .percent100 { width: 100%; }
-
-
-/**
  * ===================================================================
  * 08. common styles (_layout.scss)
  *
@@ -2134,7 +2056,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .section-intro h1 {
   font-family: "poppins-semibold", serif;
-  font-size: 3.6rem;
+  font-size: 2.5rem;
   color: #313131;
   line-height: 1.25;
   margin-bottom: 1.2rem;
