@@ -1259,7 +1259,7 @@ p.lead {
 }
 @media only screen and (max-width:768px) {
   p.lead {
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
 }
 em, i, strong, b {
@@ -1755,7 +1755,7 @@ input[type="button"] {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  height: 5.1rem;
+  height: 4.8rem;
   line-height: 5.4rem;
   padding: 0 3rem;
   margin: 0 .3rem 1.2rem 0;
@@ -2157,7 +2157,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     max-width: 650px;
   }
   .section-intro h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width:600px) {
