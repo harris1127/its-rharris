@@ -1683,7 +1683,7 @@ select {
   display: none;
 }
 textarea {
-  min-height: 25rem;
+  min-height: 8rem;
 }
 input[type="email"]:focus,
 input[type="number"]:focus,
