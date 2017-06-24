@@ -24,7 +24,7 @@ form .field label {
     background: #313A3D;
     width: 100%;
     padding: 18px 0;
-    font-size: 1.45em;
+    font-size: 1.0em;
     letter-spacing: 0.075em;
     -webkit-transition: all 333ms ease-in-out;
     -moz-transition: all 333ms ease-in-out;
@@ -55,9 +55,9 @@ form .field textarea {
     width: 100.5%;
     margin: 0;
     padding: 18px 0;
-    padding-left: 19.5%;
+    padding-left: 22%;
     color: #313A3D;
-    font-size: 1.4em;
+    font-size: 1.0em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -104,11 +104,11 @@ form input[type="submit"] {
     border: none;
     text-transform: uppercase;
     position: relative;
-    padding: 1px 45px;
+    padding: 0px 35px;
     font-size: 1.4em;
     letter-spacing: 0.1em;
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     -webkit-transition: all 333ms ease-in-out;
     -moz-transition: all 333ms ease-in-out;
     -o-transition: all 333ms ease-in-out;
