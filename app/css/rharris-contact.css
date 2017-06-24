@@ -1,25 +1,10 @@
-body {
-    background: #efefef;
-    font-size: 62.5%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #B6B6B6;
-}
 body section {
     background: white;
     margin: 60px auto 120px;
-    border-top: 15px solid #313A3D;
     text-align: center;
     padding: 50px 0 110px;
     width: 80%;
     max-width: 1100px;
-}
-body section h1 {
-    margin-bottom: 40px;
-    font-size: 4em;
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    font-weight: 100;
 }
 
 form {
@@ -56,7 +41,7 @@ form .field label + span {
     top: 12px;
     left: 7%;
     font-size: 2.5em;
-    text-shadow: 1px 2px 0 #cd6302;
+    text-shadow: 1px 2px 0 #2ea5ff;
     -webkit-transition: all 333ms ease-in-out;
     -moz-transition: all 333ms ease-in-out;
     -o-transition: all 333ms ease-in-out;
@@ -100,12 +85,12 @@ form .field input[type="text"]:focus + label, form .field input[type="text"].foc
 form .field textarea:focus + label,
 form .field textarea.focused + label {
     width: 18%;
-    background: #FD9638;
+    background: #2ea5ff;
     color: #313A3D;
 }
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
-    color: #FD9638;
+    color: #2ea5ff;
 }
 form .field:hover label {
     width: 18%;
@@ -113,7 +98,7 @@ form .field:hover label {
     color: white;
 }
 form input[type="submit"] {
-    background: #FD9638;
+    background: #2ea5ff;
     color: white;
     -webkit-appearance: none;
     border: none;
@@ -132,9 +117,9 @@ form input[type="submit"] {
 }
 form input[type="submit"]:hover {
     background: #313A3D;
-    color: #FD9638;
+    color: #2ea5ff;
 }
 form input[type="submit"]:focus {
     outline: none;
-    background: #cd6302;
+    background: #2ea5ff;
 }

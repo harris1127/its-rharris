@@ -1,87 +1,9 @@
-<div id="home-banner" class="wrapper">
-    <div class="roles">
-        <div>
-            Front-end developer.
-        </div>
-
-        <div>
-            Software developer.
-        </div>
-
-        <div>
-            Learner
-        </div>
-
-        <div>
-            Ambitious individual.
+<section class="success" id="about">
+    <div class="container">
+        <img class="img-fluid" src="../../img/rharris_home.jpg" alt="">
+        <div class="intro-text">
+            <hr class="star-light">
+            <span class="skills">itsrharris.com</span>
         </div>
     </div>
-</div>
-<div id="rharris-reveal">
-    <div class="blog">
-        <div class="rharris-post-1">
-            <div class="blog-copy">
-                <h2 data-ui-sref="home.resume">Resume</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <div class="rharris-post-2">
-            <div class="blog-copy">
-                <h2 data-ui-sref="home.about">About</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <div class="rharris-post-3">
-            <div class="blog-copy">
-                <h2 data-ui-sref="home.contact">Contact</h2>
-                <p></p>
-            </div>
-        </div>
-
-    </div>
-</div>
-<script>
-    $(".rharris-post-1").click(function(){
-        if ($("#rharris-reveal").hasClass("showblog1")) {
-            $("#rharris-reveal").removeClass("showblog1");
-            setTimeout(function(){
-                $(".rharris-post-1").removeClass("z");
-            }, 500);
-        } else {
-            $("#rharris-reveal").addClass("showblog1");
-            setTimeout(function(){
-                $(".rharris-post-1").addClass("z");
-            }, 0);
-        }
-    });
-
-    $(".rharris-post-2").click(function(){
-        if ($("#rharris-reveal").hasClass("showblog2")) {
-            $("#rharris-reveal").removeClass("showblog2");
-            setTimeout(function(){
-                $(".rharris-post-2").removeClass("z");
-            }, 500);
-        } else {
-            $("#rharris-reveal").addClass("showblog2");
-            setTimeout(function(){
-                $(".rharris-post-2").addClass("z");
-            }, 0);
-        }
-    });
-
-    $(".rharris-post-3").click(function(){
-        if ($("#rharris-reveal").hasClass("showblog3")) {
-            $("#rharris-reveal").removeClass("showblog3");
-            setTimeout(function(){
-                $(".rharris-post-3").removeClass("z");
-            }, 500);
-        } else {
-            $("#rharris-reveal").addClass("showblog3");
-            setTimeout(function(){
-                $(".rharris-post-3").addClass("z");
-            }, 0);
-        }
-    });
-</script>
+</section>
