@@ -33,7 +33,7 @@
 <!-- Navigation -->
 <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
     <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        <button id="nav-button" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
             Menu <i class="fa fa-bars"></i>
@@ -83,7 +83,7 @@
                     <a href="#">
                         <a target="_blank" class="btn btn-social-icon btn-default"
                            href="https://stackoverflow.com/users/6906148/23rharris">
-                            <span class="fa fa-stack-overflow"></span>
+                            <span style="color: white;" class="fa fa-stack-overflow"></span>
                         </a>
                     </a>
                 </li>
@@ -98,7 +98,7 @@
 <div data-ui-view="footer"></div>
 </html>
 <script>
-    $('.nav a').on('click', function(){
+    $('.nav-item').on('click', function(){
         if ($(document).width() <= 767){
             $(".navbar-toggle").click();
         }
