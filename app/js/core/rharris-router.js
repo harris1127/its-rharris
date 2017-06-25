@@ -66,7 +66,7 @@ function Routes($stateProvider, $urlRouterProvider) {
             url: 'contact',
             views: {
                 'content@': {
-                    templateUrl: 'js/home/contact/contact.html',
+                    templateUrl: 'js/home/contact/contact.html'
                 }
             }
         })

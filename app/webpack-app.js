@@ -10,6 +10,6 @@ import './js/core/rharris-router.js';
 import './js/services/services.js';
 import './js/home/controllers.js';
 import './js/home/home-controller.js';
-import './js/home/about/about-controller';
+import './js/home/about/about-controller.js';
 import './js/filters/filters.js';
 import './js/directives/directives.js';
