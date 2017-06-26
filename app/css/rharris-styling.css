@@ -11,6 +11,11 @@ z-index: 999;
 
 }
 
+#mainNav .navbar-brand {
+
+  color: white !important;
+}
+
 #nav-button {
 
   right: -20px !important;
@@ -579,7 +584,7 @@ textarea {
 
 .col-six,
 .col-1-2 {
-  width: 50%;
+  width: 49%;
 }
 
 .col-seven {
